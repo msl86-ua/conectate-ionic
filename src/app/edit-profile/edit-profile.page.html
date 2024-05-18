@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Editar Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form>
+    <ion-item>
+      <ion-label position="stacked">Biografía:</ion-label>
+      <ion-textarea placeholder="Biografía..."></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Edad:</ion-label>
+      <ion-input type="number" value="23"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Localización:</ion-label>
+      <ion-input type="text" value="Alicante"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" color="primary" [routerLink]="['/tabs/user-profile']">Confirmar datos</ion-button>
+  </form>
+</ion-content>

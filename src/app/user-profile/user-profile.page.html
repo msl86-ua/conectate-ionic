@@ -1,0 +1,49 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Perfil de Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Biografía:</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Persona joven con gran ambición y ganas de conocer a gente nueva y hacer amigos.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Edad: 23</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Localización: Alicante</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" color="primary">Ir a amigos</ion-button>
+  <ion-button expand="block" color="secondary" [routerLink]="['/edit-profile']">Editar información</ion-button> 
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Amigos:</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="assets/img/persona1.jpg" />
+      </ion-avatar>
+      <ion-avatar slot="start">
+        <img src="assets/img/persona2.jpg" />
+      </ion-avatar>
+      <ion-avatar slot="start">
+        <img src="assets/img/persona3.jpg" />
+      </ion-avatar>
+      <ion-avatar slot="start">
+        <img src="assets/img/persona4.jpg" />
+      </ion-avatar>
+    </ion-item>
+  </ion-list>
+</ion-content>
