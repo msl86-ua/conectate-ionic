@@ -1,0 +1,7 @@
+{
+  "name": "conectate",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
