@@ -24,6 +24,10 @@ const routes: Routes = [
         loadChildren: () => import('../user-profile/user-profile.module').then(m => m.UserProfilePageModule)
       },
       {
+        path: 'friends',
+        loadChildren: () => import('../friends/friends.module').then(m => m.FriendsPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'
