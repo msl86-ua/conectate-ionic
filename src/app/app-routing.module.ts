@@ -21,7 +21,11 @@ const routes: Routes = [
   {
     path: 'friends',
     loadChildren: () => import('./friends/friends.module').then( m => m.FriendsPageModule)
+  },  {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   }
+
 ];
 @NgModule({
   imports: [

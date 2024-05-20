@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Conéctate</ion-title>
+    <ion-buttons slot="end">
+      <ion-button href="/tabs/user-profile" fill="clear">
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-label>Usuario</ion-label>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button href="/" size="small" fill="outline" shape="round">
+    <ion-icon name="add-outline"></ion-icon>
+    <ion-label>Crear un plan</ion-label>
+  </ion-button>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-list lines="none">
+        <div *ngFor="let post of posts">
+          <ion-item (click)="openPost(post.id)">
+            <ion-avatar slot="start">
+              <img [src]="post.img"/>
+            </ion-avatar>
+            <ion-label>{{ post.name }}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-card (click)="openPost(post.id)">
+              <ion-card-header>
+                <ion-card-title>{{ post.title }}</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                {{ post.description }}
+              </ion-card-content>
+            </ion-card>
+          </ion-item>
+        </div>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
