@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalles del Plan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card class="card">
+    <ion-item>
+      <ion-avatar slot="start" class="avatar-large">
+        <img [src]="plan.creatorAvatar" />
+      </ion-avatar>
+      <ion-label class="label-large">
+        <h2>{{ plan.creatorName }}</h2>
+        <p>{{ plan.creationDate | date:'short' }}</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label><strong>Título:</strong></ion-label>
+      <ion-label>{{ plan.title }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label><strong>Descripción:</strong></ion-label>
+      <ion-label>{{ plan.description }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label><strong>Apuntarte al Plan:</strong></ion-label>
+      <ion-button>Apuntarse</ion-button>
+    </ion-item>
+  </ion-card>
+  <ion-card class="card">
+    <ion-label><strong>Comentarios:</strong></ion-label>
+    <ion-item *ngFor="let comment of plan.comments" class="comment-item">
+      <div class="comment-content">
+        <ion-label class="message-text">{{ comment?.content }}</ion-label>
+        <span style="display: flex; justify-content: space-between;">
+          <p class="comment-date">{{ comment?.createdAt | date:'short' }}</p>
+          <p class="comment-author">{{ comment?.author }}</p>
+        </span>
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Escribe un comentario..." [(ngModel)]="newComment"></ion-input>
+      <ion-button color="warning" (click)="addComment()">Responder</ion-button>
+    </ion-item>
+  </ion-card>
+</ion-content>

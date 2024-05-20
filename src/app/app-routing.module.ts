@@ -8,23 +8,33 @@ const routes: Routes = [
   },
   {
     path: 'user-profile',
-    loadChildren: () => import('./user-profile/user-profile.module').then( m => m.UserProfilePageModule)
+    loadChildren: () => import('./user-profile/user-profile.module').then(m => m.UserProfilePageModule)
   },
   {
     path: 'edit-profile',
-    loadChildren: () => import('./edit-profile/edit-profile.module').then( m => m.EditProfilePageModule)
+    loadChildren: () => import('./edit-profile/edit-profile.module').then(m => m.EditProfilePageModule)
   },
   {
     path: 'chat/:friendId',
-    loadChildren: () => import('./chat/chat.module').then( m => m.ChatPageModule)
+    loadChildren: () => import('./chat/chat.module').then(m => m.ChatPageModule)
   },
   {
     path: 'friends',
-    loadChildren: () => import('./friends/friends.module').then( m => m.FriendsPageModule)
-  },  {
+    loadChildren: () => import('./friends/friends.module').then(m => m.FriendsPageModule)
+  },
+  {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+  },
+  {
+    path: 'crear-plan',
+    loadChildren: () => import('./crear-plan/crear-plan.module').then(m => m.CrearPlanPageModule)
+  },
+  {
+    path: 'post/:postId',
+    loadChildren: () => import('./post/post.module').then(m => m.PostPageModule)
   }
+
 
 ];
 @NgModule({
@@ -33,4 +43,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

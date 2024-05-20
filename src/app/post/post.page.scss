@@ -1,0 +1,57 @@
+.card {
+    max-width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.avatar-large {
+    width: 70px;
+    height: 70px;
+}
+
+.avatar-large img {
+    border-radius: 50%;
+}
+
+.label-large h2 {
+    font-size: 1.5em;
+}
+
+.message-text {
+    font-size: 1.2em;
+    word-wrap: break-word;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+ion-footer {
+    padding-left: 10em;
+    padding-right: 10em;
+}
+
+.comment-item {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+}
+
+.comment-content {
+    flex-grow: 1;
+}
+
+.message-text {
+    font-weight: bold;
+    margin-bottom: 4px;
+    margin-top: 6px;
+}
+
+.comment-date {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.comment-author {
+    font-size: 0.9rem;
+    color: #666;
+}

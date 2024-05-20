@@ -11,7 +11,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-button href="/" size="small" fill="outline" shape="round">
+  <ion-button href="crear-plan" size="small" fill="outline" shape="round">
     <ion-icon name="add-outline"></ion-icon>
     <ion-label>Crear un plan</ion-label>
   </ion-button>
@@ -22,7 +22,7 @@
         <div *ngFor="let post of posts">
           <ion-item (click)="openPost(post.id)">
             <ion-avatar slot="start">
-              <img [src]="post.img"/>
+              <img [src]="post.img" />
             </ion-avatar>
             <ion-label>{{ post.name }}</ion-label>
           </ion-item>

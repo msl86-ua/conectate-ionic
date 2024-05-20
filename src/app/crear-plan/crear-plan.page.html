@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Crear un plan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="content-crear">
+  <ion-item>
+    <ion-input style="margin: 2rem;" label="Título" label-placement="floating" fill="outline"
+      placeholder="Escribe aquí el título"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input style="margin: 2rem;" label="Descripción" label-placement="floating" fill="outline"
+      placeholder="Escribe aquí los detalles"></ion-input>
+  </ion-item>
+
+  <ion-item style="display: flex; width: 100vw;">
+    <ion-label style="margin-left: 20vw;">Hacer público</ion-label>
+    <ion-toggle></ion-toggle>
+  </ion-item>
+
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let pill of pills; let i = index">
+      <ion-item>
+        <ion-label>{{pill}}</ion-label>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-button color="primary" style="margin: 1rem; margin-left: 40vw;">Crear</ion-button>
+
+  <div style="display: flex; justify-content: space-around; margin-bottom: 1rem;">
+    <ion-buttons center>
+      <ion-button fill="clear" shape="round" size="small"><ion-icon name="share-social"></ion-icon></ion-button>
+      <ion-button fill="clear" shape="round" size="small"><ion-icon name="logo-twitter"></ion-icon></ion-button>
+      <ion-button fill="clear" shape="round" size="small"><ion-icon name="logo-instagram"></ion-icon></ion-button>
+    </ion-buttons>
+  </div>
+</ion-content>
