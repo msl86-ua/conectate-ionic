@@ -9,9 +9,9 @@ import { Router } from '@angular/router';
 export class HomePage implements OnInit {
 
   posts = [
-    {id: 1, img: 'assets/img/persona1.jpg', name: 'Pablo', title: 'Acampada en Alicante', description: 'Ir de acampada todo el fin de semana en las cercanías de Alicante.'},
-    {id: 2, img: 'assets/img/persona2.jpg', name: 'Lucia', title: 'Juegos de mesay charla', description: 'Quedada en mi casa para jugar a juegos de mesa y charlar toda la tarde.'},
-    {id: 3, img: 'assets/img/persona3.jpg', name: 'Antoni', title: 'Soy nuevo en la ciudad y quiero conocer el sitio', description: 'Quedada en el centro de Alicante para hacer un poco de turisteo y conocer el lugar.'}
+    { id: 1, pills: ['Amigos', 'Risas'], img: 'assets/img/persona1.jpg', name: 'Pablo', title: 'Acampada en Alicante', description: 'Ir de acampada todo el fin de semana en las cercanías de Alicante.' },
+    { id: 2, pills: ['Fiesta', 'Noche', 'Copas'], img: 'assets/img/persona2.jpg', name: 'Lucia', title: 'Juegos de mesay charla', description: 'Quedada en mi casa para jugar a juegos de mesa y charlar toda la tarde.' },
+    { id: 3, pills: ['Tranquilo', 'Relax'], img: 'assets/img/persona3.jpg', name: 'Antoni', title: 'Soy nuevo en la ciudad y quiero conocer el sitio', description: 'Quedada en el centro de Alicante para hacer un poco de turisteo y conocer el lugar.' }
   ];
 
   constructor(private router: Router) { }

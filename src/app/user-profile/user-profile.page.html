@@ -1,4 +1,3 @@
-
 <ion-header>
   <ion-toolbar>
     <ion-title>Perfil de Usuario</ion-title>
@@ -17,15 +16,17 @@
 
   <ion-list>
     <ion-item>
-      <ion-label>Edad: 23</ion-label>
+      <ion-label><strong>Edad</strong>: 23</ion-label>
     </ion-item>
     <ion-item>
-      <ion-label>Localización: Alicante</ion-label>
+      <ion-label><strong>Localización</strong>: Alicante</ion-label>
     </ion-item>
   </ion-list>
 
-  <ion-button expand="block" color="primary">Ir a amigos</ion-button>
-  <ion-button expand="block" color="secondary" [routerLink]="['/edit-profile']">Editar información</ion-button>
+  <div style="display: flex; justify-content: center;">
+    <ion-button expand="block" color="primary">Ir a amigos</ion-button>
+    <ion-button expand="block" color="secondary" [routerLink]="['/edit-profile']">Editar información</ion-button>
+  </div>
 
   <ion-list>
     <ion-item>

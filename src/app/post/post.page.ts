@@ -31,15 +31,30 @@ export class PostPage implements OnInit {
     },
     {
       id: 2,
-      creatorName: 'Ana',
+      creatorName: 'Lucia',
       creationDate: new Date(),
       creatorAvatar: 'assets/img/persona2.jpg',
       title: 'Plan de estudio intensivo',
       description: 'Aprender inglés y programación, y todo el resto de asignaturas impartidas por el excelentísimo cuerpo de profesores y profesores del país español.',
       comments: [
         {
-          author: 'Ana',
+          author: 'Lucia',
           content: 'Estoy emocionada con este plan.',
+          createdAt: new Date()
+        }
+      ]
+    },
+    {
+      id: 3,
+      creatorName: 'Antoni',
+      creationDate: new Date(),
+      creatorAvatar: 'assets/img/persona3.jpg',
+      title: 'Plan de barbacoa',
+      description: 'Disfrutar de una maravillosa jornada de rostida con el buen tiempo que empieza a llegar en el parque Vilaplana.',
+      comments: [
+        {
+          author: 'Antoni',
+          content: 'Estoy impaciente.',
           createdAt: new Date()
         }
       ]

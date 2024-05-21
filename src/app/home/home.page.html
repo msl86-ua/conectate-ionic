@@ -35,6 +35,11 @@
               </ion-card-header>
               <ion-card-content>
                 {{ post.description }}
+                <div style="margin-top: 4px;">
+                  <ion-badge *ngFor="let pill of post.pills; let i = index" style="margin: .2rem;" color="medium">
+                    <ion-label>{{pill}}</ion-label>
+                  </ion-badge>
+                </div>
               </ion-card-content>
             </ion-card>
           </ion-item>
