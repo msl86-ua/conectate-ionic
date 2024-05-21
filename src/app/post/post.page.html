@@ -32,6 +32,13 @@
     </ion-item>
   </ion-card>
   <ion-card class="card">
+    <div>
+      <ion-badge *ngFor="let pill of pills; let i = index" style="margin: .2rem;">
+        <ion-label>{{pill}}</ion-label>
+      </ion-badge>
+    </div>
+  </ion-card>
+  <ion-card class="card">
     <ion-label><strong>Comentarios:</strong></ion-label>
     <ion-item *ngFor="let comment of plan.comments" class="comment-item">
       <div class="comment-content">

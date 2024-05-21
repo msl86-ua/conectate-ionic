@@ -11,6 +11,7 @@ export class PostPage implements OnInit {
   plan: any;
   comments: any[] = [];
   newComment: string = '';
+  pills: string[] = ['Noche', 'Juvenil', 'Playa', 'Fiesta']
 
   plans = [
     {

@@ -24,12 +24,18 @@
   </ion-item>
 
 
-  <ion-list>
-    <ion-item-sliding *ngFor="let pill of pills; let i = index">
-      <ion-item>
-        <ion-label>{{pill}}</ion-label>
-      </ion-item>
-    </ion-item-sliding>
+  <ion-list style="padding: 1rem;">
+    <ion-badge *ngFor="let pill of pills; let i = index" style="margin: .2rem;">
+      <ion-label>{{pill}}</ion-label>
+    </ion-badge>
+    <div style="display: flex; gap: 1rem; align-items: center;">
+      <ion-input [(ngModel)]="newPill" label="Añadir temas" labelPlacement="stacked" [clearOnEdit]="true"
+        placeholder="Escribe un nuevo tema aquí">
+      </ion-input>
+      <span>
+        <ion-button color="primary" size="small" (click)="addPill()">Añadir</ion-button>
+      </span>
+    </div>
   </ion-list>
 
   <ion-button color="primary" style="margin: 1rem; margin-left: 40vw;">Crear</ion-button>

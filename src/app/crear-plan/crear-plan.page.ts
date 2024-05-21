@@ -7,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrearPlanPage implements OnInit {
   pills = ['Noche', 'Juvenil'];
+  newPill = '';
   constructor() { }
 
   ngOnInit() {
+  }
+
+  addPill(): void {
+    this.pills.push(this.newPill)
+    this.newPill = ''
   }
 }
