@@ -11,15 +11,17 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-button href="crear-plan" size="small" fill="outline" shape="round">
-    <ion-icon name="add-outline"></ion-icon>
-    <ion-label>Crear un plan</ion-label>
-  </ion-button>
+  <div style="display: flex; width: 100%; justify-content: center; margin-top: 8px;">
+    <ion-button href="crear-plan" size="small" fill="outline" shape="round">
+      <ion-icon name="add-outline"></ion-icon>
+      <ion-label>Crear un plan</ion-label>
+    </ion-button>
+  </div>
 
   <ion-card>
     <ion-card-content>
       <ion-list lines="none">
-        <div *ngFor="let post of posts">
+        <div *ngFor="let post of posts" class="post-card">
           <ion-item (click)="openPost(post.id)">
             <ion-avatar slot="start">
               <img [src]="post.img" />
