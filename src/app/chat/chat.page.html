@@ -1,9 +1,12 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/tabs/friends"></ion-back-button>
+    <ion-title [routerLink]="['/home']">Conéctate</ion-title>
+    <ion-buttons slot="end">
+      <ion-button href="/tabs/user-profile" fill="clear">
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-label>Usuario</ion-label>
+      </ion-button>
     </ion-buttons>
-    <ion-title>Chat con {{ friend?.name }}</ion-title>
   </ion-toolbar>
 </ion-header>
 

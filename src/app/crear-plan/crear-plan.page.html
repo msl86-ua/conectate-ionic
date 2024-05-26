@@ -1,9 +1,12 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/tabs/home"></ion-back-button>
+    <ion-title [routerLink]="['/home']">Conéctate</ion-title>
+    <ion-buttons slot="end">
+      <ion-button href="/tabs/user-profile" fill="clear">
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-label>Usuario</ion-label>
+      </ion-button>
     </ion-buttons>
-    <ion-title>Crear un plan</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -38,7 +41,7 @@
     </div>
   </ion-list>
 
-  <ion-button color="primary" style="margin: 1rem; margin-left: 40vw;">Crear</ion-button>
+  <ion-button color="primary" style="margin: 1rem; margin-left: 40vw;" [routerLink]="['/home']">Crear</ion-button>
 
   <div style="display: flex; justify-content: space-around; margin-bottom: 1rem;">
     <ion-buttons center>
